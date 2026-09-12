@@ -35,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru" className="bg-background">
       <head>
+        <meta name="yandex-verification" content="13c04a9b9805a7b5" />
         <meta
           name="keywords"
           content="la casino, la casino зеркало, la casino играть, la casino официальный, la casino официальный сайт, лa казино, ля казино, ля казино зеркало, ля казино зеркало рабочее, ля казино играть, ля казино онлайн, ля казино официальный, ля казино официальный сайт"
