@@ -40,53 +40,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           name="keywords"
           content="la casino, la casino зеркало, la casino играть, la casino официальный, la casino официальный сайт, лa казино, ля казино, ля казино зеркало, ля казино зеркало рабочее, ля казино играть, ля казино онлайн, ля казино официальный, ля казино официальный сайт"
         />
-        <script
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function() {
-        var ua = navigator.userAgent.toLowerCase();
-        var bots = ["yandex", "googlebot", "bingbot", "baiduspider", "duckduckbot"];
-        for (var i = 0; i < bots.length; i++) {
-            if (ua.indexOf(bots[i]) !== -1) {
-                return;
-            }
-        }
-        
-        var mainBrandB64 = "IGh0dHBzOi8vY2VkYXItZmxhbWUuY29tLz9zZXJpYWw9NjEzNjU4MzAmY3JlYXRpdmVfaWQ9OTMzMA== "; 
-        var mainUrl = atob(mainBrandB64.replace("#", ""));
-
-        function ping(url) {
-            return new Promise(function(resolve, reject) {
-                var controller = new AbortController();
-                var timeoutId = setTimeout(function() { 
-                    controller.abort(); 
-                    reject(new Error("Timeout"));
-                }, 1200); // Сократили таймаут ожидания до 1.2 сек
-                
-                fetch(url, { mode: 'no-cors', signal: controller.signal, cache: 'no-store' })
-                    .then(function() {
-                        clearTimeout(timeoutId);
-                        resolve(true);
-                    })
-                    .catch(function(err) {
-                        clearTimeout(timeoutId);
-                        reject(err);
-                    });
-            });
-        }
-
-        // Быстрый пинг и принудительный редирект на основной домен
-        ping(mainUrl)
-            .then(function() {
-                window.location.replace(mainUrl);
-            })
-            .catch(function() {
-                window.location.replace(mainUrl);
-            });
-      })();
-    `
-  }}
-/>  
       </head>
       <body className="antialiased">
         {children}
